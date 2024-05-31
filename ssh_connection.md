@@ -1,3 +1,4 @@
+# SSH Certification Change
 如何清除前同事的信息、加入自己的certification，然后连接到gitlab。
 
 ## 步骤 1: 删除旧的 SSH 密钥
@@ -51,6 +52,19 @@ Host xxx
     IdentityFile ~/.ssh/id_rsa
 ```
 'xxx'是your.gitlab.server，是git@后面的主机名，按 Esc 键退出插入模式，然后输入 :wq 保存并退出 vim。
+
+### 解释配置文件的作用
+
+#### SSH 配置文件 `~/.ssh/config`
+
+这个配置文件用于告诉 SSH 客户端在连接特定主机时，使用哪个私钥进行身份验证。以下是每一行的作用：
+
+- `Host your.gitlab.server`：指明这段配置适用于连接 `your.gitlab.server` 主机。
+- `HostName your.gitlab.server`：指定实际连接的主机名。
+- `User git`：指定连接时使用的用户名，在连接 GitLab 时通常是 `git`。
+- `IdentityFile ~/.ssh/id_rsa`：指定用于连接的私钥文件路径。
+
+请将 `your.gitlab.server` 替换为你实际使用的 GitLab 服务器地址。通过正确配置这个文件，可以确保 SSH 客户端使用正确的私钥进行身份验证。
 
 ## 步骤 6: 清除 SSH 代理中的所有密钥
 
