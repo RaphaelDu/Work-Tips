@@ -74,9 +74,3 @@ source ~/.bashrc
 ## Related Documentation
 - [Official ossutil Documentation](https://www.alibabacloud.com/help/en/object-storage-service/latest/ossutil-overview)
 - [Alibaba Cloud OSS](https://www.alibabacloud.com/product/oss)
-
-## Contributing
-Feel free to open issues or submit pull requests if you have other useful tips for working with ossutil64 in restricted environments.
-
-## License
-This documentation is available under the MIT License.
