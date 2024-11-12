@@ -1,4 +1,4 @@
-# How to Install ossutil64 Without sudo Privileges
+# How to install ossutil64 without sudo privileges
 
 ## Background
 When working in environments where sudo privileges are not available (like some Docker containers or restricted systems), the standard installation method for ossutil64 might fail. This guide provides a workaround for installing ossutil64 without sudo.
